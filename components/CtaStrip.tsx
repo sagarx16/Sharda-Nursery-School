@@ -11,7 +11,7 @@ export default function CtaStrip() {
           </div>
           <div>
             <h4 className="font-headline-sm text-title-lg text-primary-container font-bold">
-              Limited Enrollment Capacity Per Wing
+              Enrollment Open for Session 2026–27
             </h4>
             <p className="font-body-sm text-body-sm text-on-secondary-container/90 mt-0.5">
               To uphold our 1:12 teacher-scholar ratio, batch admissions are strictly first-come, first-served.
