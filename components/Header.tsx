@@ -88,10 +88,10 @@ export default function Header() {
 
       {/* Main Navbar Bar - Fixed Height & Centered Layout */}
       <div className="h-20 w-full bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-container-high overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-3 sm:px-4 lg:px-6 h-full flex items-center justify-between gap-2 lg:gap-4 xl:gap-2">
+        <div className="max-w-[1200px] mx-auto px-3 sm:px-4 lg:px-6 h-full flex items-center justify-between gap-1 sm:gap-3 lg:gap-4 xl:gap-2">
           {/* Logo & School Name */}
           <Link href="/" className="flex items-center gap-2 sm:gap-3 min-w-0 shrink group py-1">
-            <div className="relative w-11 h-11 sm:w-14 sm:h-14 group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <div className="relative w-10 h-10 sm:w-14 sm:h-14 group-hover:scale-105 transition-transform duration-300 shrink-0">
               <Image
                 src="/School Emblem Logo.png"
                 alt="Sharda Nursery Public School Emblem Crest"
@@ -101,11 +101,11 @@ export default function Header() {
                 priority
               />
             </div>
-            <div className="hidden sm:flex min-w-0 flex-col justify-center">
-              <span className="font-headline-sm text-sm sm:text-base xl:text-base tracking-tight text-primary-container leading-none font-bold group-hover:text-primary transition-colors whitespace-nowrap">
+            <div className="flex min-w-0 max-w-[175px] sm:max-w-none flex-col justify-center overflow-hidden">
+              <span className="font-headline text-[10px] sm:text-base xl:text-base tracking-tight text-primary-container leading-tight font-bold group-hover:text-primary transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
                 SHARDA NURSERY PUBLIC SCHOOL
               </span>
-              <span className="font-label-badge text-[9px] sm:text-[10px] xl:text-[10px] uppercase text-secondary font-bold tracking-wider mt-1 whitespace-nowrap">
+              <span className="hidden sm:block font-label-badge text-[10px] xl:text-[10px] uppercase text-secondary font-bold tracking-wider mt-1 whitespace-nowrap">
                 &amp; TUITION CENTER • English Medium, Bokaro
               </span>
             </div>
@@ -146,7 +146,7 @@ export default function Header() {
 
             <a
               href={`tel:${siteConfig.phoneRaw}`}
-              className="h-9 px-3 sm:px-4 xl:px-3 rounded-full bg-primary-container text-on-primary font-title-md text-xs sm:text-sm hover:bg-primary transition-all shadow-sm hover:shadow-md inline-flex items-center gap-1.5 shrink-0 whitespace-nowrap cursor-pointer"
+              className="h-8 w-8 sm:h-9 sm:w-auto sm:px-4 xl:px-3 rounded-full bg-primary-container text-on-primary font-title-md text-xs sm:text-sm hover:bg-primary transition-all shadow-sm hover:shadow-md inline-flex items-center justify-center sm:justify-start gap-1.5 shrink-0 whitespace-nowrap cursor-pointer"
             >
               <Phone className="w-3.5 h-3.5 text-secondary-fixed shrink-0" />
               <span className="hidden sm:inline">Enroll:</span>
@@ -156,7 +156,7 @@ export default function Header() {
             {/* Mobile / Tablet Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden h-9 w-9 rounded-xl bg-surface-container text-primary hover:bg-surface-container-high transition-colors border border-surface-container-high flex items-center justify-center shrink-0"
+              className="xl:hidden h-8 w-8 sm:h-9 sm:w-9 rounded-xl bg-surface-container text-primary hover:bg-surface-container-high transition-colors border border-surface-container-high flex items-center justify-center shrink-0"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
