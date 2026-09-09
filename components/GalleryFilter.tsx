@@ -84,14 +84,14 @@ export default function GalleryFilter() {
   return (
     <div id="gallery" className="w-full">
       {/* Category Filter Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+      <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-10">
         {categories.map((cat) => {
           const isActive = activeCategory === cat.id;
           return (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-full font-title-md text-body-md transition-all cursor-pointer ${
+              className={`px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full font-title-md text-xs sm:text-body-md transition-all cursor-pointer ${
                 isActive
                   ? "bg-primary-container text-on-primary font-bold shadow-sm"
                   : "bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high border border-surface-container-high"
@@ -130,7 +130,7 @@ export default function GalleryFilter() {
               </div>
             </div>
 
-            <div className="p-5">
+            <div className="p-4 sm:p-5">
               <h3 className="font-headline-sm text-title-lg text-primary-container mb-1 group-hover:text-primary transition-colors">
                 {item.title}
               </h3>
@@ -146,18 +146,18 @@ export default function GalleryFilter() {
       {selectedImage && (
         <div
           onClick={() => setSelectedImage(null)}
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 animate-in fade-in duration-200"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-surface-container-lowest rounded-2xl overflow-hidden max-w-3xl w-full shadow-2xl border border-surface-container-high"
+            className="relative bg-surface-container-lowest rounded-2xl overflow-hidden max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-surface-container-high"
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition-colors"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition-colors"
               aria-label="Close image preview"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
 
             <div className="relative aspect-[16/10] w-full bg-black">
@@ -169,8 +169,8 @@ export default function GalleryFilter() {
               />
             </div>
 
-            <div className="p-6 bg-surface-container-lowest">
-              <div className="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge font-bold uppercase mb-2">
+            <div className="p-4 sm:p-6 bg-surface-container-lowest">
+              <div className="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-[10px] sm:text-label-badge font-bold uppercase mb-2">
                 {selectedImage.categoryLabel}
               </div>
               <h3 className="font-headline-sm text-headline-sm text-primary-container mb-2">

@@ -70,9 +70,9 @@ export default function AdmissionForm() {
       <div className="max-w-[1200px] mx-auto px-4 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Form Card */}
-          <div className="lg:col-span-7 bg-surface-container-lowest p-6 sm:p-10 rounded-2xl shadow-md border border-surface-container-high">
+          <div className="lg:col-span-7 bg-surface-container-lowest p-5 sm:p-8 lg:p-10 rounded-2xl shadow-md border border-surface-container-high">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-              <span className="px-3.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge font-bold uppercase tracking-wider">
+              <span className="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-[10px] sm:text-label-badge font-bold uppercase tracking-wider">
                 Admissions Open {session.currentSession}
               </span>
               <span className="text-body-sm text-on-surface-variant font-title-md">
@@ -84,20 +84,20 @@ export default function AdmissionForm() {
               Secure Your Child&apos;s Seat Today
             </h3>
 
-            <p className="font-body-md text-body-md text-on-surface-variant mb-8">
+            <p className="font-body-md text-body-md text-on-surface-variant mb-6 sm:mb-8">
               Avail the <strong className="text-primary">Free Admission Benefit</strong> for early registered inquiries. Our admissions desk will call back within 4 business hours.
             </p>
 
             {successMsg ? (
-              <div className="p-6 bg-secondary-container/40 rounded-xl border border-secondary-container text-on-secondary-container animate-in fade-in duration-300">
-                <div className="flex items-center gap-2.5 font-title-md text-lg font-bold">
-                  <CheckCircle2 className="w-6 h-6 text-secondary shrink-0" />
+              <div className="p-5 sm:p-6 bg-secondary-container/40 rounded-xl border border-secondary-container text-on-secondary-container animate-in fade-in duration-300">
+                <div className="flex items-center gap-2.5 font-title-md text-base sm:text-lg font-bold">
+                  <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-secondary shrink-0" />
                   <span>Inquiry Submitted Successfully!</span>
                 </div>
                 <p className="font-body-md text-body-md mt-2 text-on-secondary-container/90 leading-relaxed">
                   {successMsg}
                 </p>
-                <div className="mt-4 pt-4 border-t border-secondary-container/60 flex items-center justify-between text-body-sm">
+                <div className="mt-4 pt-4 border-t border-secondary-container/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-body-sm">
                   <span>Urgent inquiries? Call us directly:</span>
                   <a href={`tel:${siteConfig.phoneRaw}`} className="font-bold underline text-primary">
                     {siteConfig.phone}
@@ -105,13 +105,13 @@ export default function AdmissionForm() {
                 </div>
                 <button
                   onClick={() => setSuccessMsg(null)}
-                  className="mt-4 text-xs font-bold text-primary uppercase underline tracking-wider"
+                  className="mt-4 text-xs font-bold text-primary uppercase underline tracking-wider cursor-pointer"
                 >
                   Submit Another Inquiry
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                 {errorMsg && (
                   <div className="p-4 bg-error-container text-on-error-container rounded-xl flex items-center gap-3 text-body-sm font-medium">
                     <AlertCircle className="w-5 h-5 shrink-0 text-error" />
@@ -120,7 +120,7 @@ export default function AdmissionForm() {
                 )}
 
                 {/* Parent Name & Phone */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor="parentName" className="font-title-md text-body-sm text-on-surface">
                       Parent&apos;s Full Name *
@@ -132,7 +132,7 @@ export default function AdmissionForm() {
                       placeholder="e.g. Rajesh Kumar Sharma"
                       value={formData.parentName}
                       onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
+                      className="w-full px-3.5 sm:px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
                     />
                   </div>
 
@@ -147,13 +147,13 @@ export default function AdmissionForm() {
                       placeholder="+91 9835112975"
                       value={formData.contactPhone}
                       onChange={(e) => setFormData({ ...formData, contactPhone: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
+                      className="w-full px-3.5 sm:px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
                     />
                   </div>
                 </div>
 
                 {/* Child Name & DOB */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor="childName" className="font-title-md text-body-sm text-on-surface">
                       Child&apos;s Name *
@@ -165,7 +165,7 @@ export default function AdmissionForm() {
                       placeholder="e.g. Aarav Sharma"
                       value={formData.childName}
                       onChange={(e) => setFormData({ ...formData, childName: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
+                      className="w-full px-3.5 sm:px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
                     />
                   </div>
 
@@ -179,13 +179,13 @@ export default function AdmissionForm() {
                       required
                       value={formData.childDob}
                       onChange={(e) => setFormData({ ...formData, childDob: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
+                      className="w-full px-3.5 sm:px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
                     />
                   </div>
                 </div>
 
                 {/* Grade & Sector */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor="gradeSelect" className="font-title-md text-body-sm text-on-surface">
                       Grade Applying For *
@@ -195,7 +195,7 @@ export default function AdmissionForm() {
                       required
                       value={formData.gradeSelect}
                       onChange={(e) => setFormData({ ...formData, gradeSelect: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
+                      className="w-full px-3.5 sm:px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
                     >
                       <option value="" disabled>
                         Select Class / Program
@@ -219,7 +219,7 @@ export default function AdmissionForm() {
                       placeholder="e.g. Sector 9/C, Sector 4, Chas..."
                       value={formData.residentialSector}
                       onChange={(e) => setFormData({ ...formData, residentialSector: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
+                      className="w-full px-3.5 sm:px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
                     />
                   </div>
                 </div>
@@ -235,7 +235,7 @@ export default function AdmissionForm() {
                     placeholder="Tell us about your child's interests, previous schooling, or entrance test targets (DAV/DPS/GGPS)..."
                     value={formData.parentMessage}
                     onChange={(e) => setFormData({ ...formData, parentMessage: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
+                    className="w-full px-3.5 sm:px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface text-body-md border border-surface-container-highest focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm transition-all"
                   />
                 </div>
 
@@ -243,7 +243,7 @@ export default function AdmissionForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3.5 px-6 rounded-full bg-primary-container text-on-primary font-title-md text-title-md hover:bg-primary shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 disabled:opacity-75 cursor-pointer"
+                  className="w-full py-3.5 px-4 sm:px-6 rounded-full bg-primary-container text-on-primary font-title-md text-sm sm:text-title-md hover:bg-primary shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 disabled:opacity-75 cursor-pointer text-center"
                 >
                   {loading ? (
                     <>
@@ -252,8 +252,10 @@ export default function AdmissionForm() {
                     </>
                   ) : (
                     <>
-                      <UserCheck className="w-5 h-5 text-secondary-fixed" />
-                      <span>Submit Admission Inquiry (Free Admission Benefit)</span>
+                      <UserCheck className="w-4 h-4 sm:w-5 sm:h-5 text-secondary-fixed shrink-0" />
+                      <span className="whitespace-normal">
+                        Submit Admission Inquiry (Free Admission Offer)
+                      </span>
                     </>
                   )}
                 </button>

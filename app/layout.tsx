@@ -67,7 +67,7 @@ export default function RootLayout({
       </head>
       <body className="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container flex flex-col min-h-screen">
         <Header />
-        <main className="flex-1 w-full pt-[120px] bg-surface min-h-screen">{children}</main>
+        <main className="flex-1 w-full pt-[128px] sm:pt-[116px] bg-surface min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

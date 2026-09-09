@@ -134,7 +134,7 @@ export default function PhotoCarousel() {
           aria-live="polite"
         >
           {/* Slides */}
-          <div className="relative w-full aspect-video sm:aspect-[16/7] bg-surface-container-high">
+          <div className="relative w-full aspect-[4/3] sm:aspect-video md:aspect-[16/7] bg-surface-container-high">
             {CAMPUS_SLIDES.map((slide, i) => {
               const isActive = i === current;
               const isNear = i === prevIndex || i === nextIndex;
@@ -189,19 +189,19 @@ export default function PhotoCarousel() {
           {/* Left Arrow */}
           <button
             onClick={prev}
-            className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-primary shadow-lg border border-surface-container-high flex items-center justify-center opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all hover:bg-surface-container-lowest hover:scale-110 duration-200"
+            className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-primary shadow-lg border border-surface-container-high flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 transition-all hover:bg-surface-container-lowest hover:scale-110 duration-200"
             aria-label="Previous photo"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
           {/* Right Arrow */}
           <button
             onClick={next}
-            className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-primary shadow-lg border border-surface-container-high flex items-center justify-center opacity-0 group-hover:opacity-100 focus:opacity-100 transition-all hover:bg-surface-container-lowest hover:scale-110 duration-200"
+            className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-primary shadow-lg border border-surface-container-high flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 transition-all hover:bg-surface-container-lowest hover:scale-110 duration-200"
             aria-label="Next photo"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
 
