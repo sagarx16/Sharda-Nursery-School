@@ -4,6 +4,7 @@ import AdmissionForm from "@/components/AdmissionForm";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaStrip from "@/components/CtaStrip";
 import PhotoCarousel from "@/components/PhotoCarousel";
+import AcademicCurriculum from "@/components/AcademicCurriculum";
 import { Home, Stars } from "lucide-react";
 
 export const metadata = {
@@ -61,6 +62,9 @@ export default function AcademicsAdmissionsPage() {
 
       {/* Photo Carousel */}
       <PhotoCarousel />
+
+      {/* Academic Curriculum & Learning Framework */}
+      <AcademicCurriculum />
 
       {/* Admission Form */}
       <AdmissionForm />
