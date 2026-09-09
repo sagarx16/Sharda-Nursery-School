@@ -42,64 +42,24 @@ export default function AcademicsAdmissionsPage() {
       </div>
 
       {/* Hero Intro Section */}
-      <section className="relative w-full bg-gradient-to-br from-primary via-primary to-primary-container overflow-hidden py-14 lg:py-20">
-        {/* Decorative blobs */}
-        <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-secondary-fixed/10 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -right-16 w-[28rem] h-[28rem] rounded-full bg-secondary-container/10 blur-3xl pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[200px] rounded-full bg-secondary-fixed/5 blur-2xl pointer-events-none" />
+      <section className="relative w-full bg-gradient-to-br from-primary via-primary to-primary-container overflow-hidden py-10 lg:py-14">
+        <div className="absolute -top-16 -left-16 w-72 h-72 rounded-full bg-secondary-fixed/10 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-16 -right-16 w-72 h-72 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none" />
 
         <div className="max-w-[1200px] mx-auto px-4 lg:px-6 relative z-10 text-center">
-
-          {/* Session badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-fixed/20 border border-secondary-fixed/30 text-secondary-fixed font-label-badge text-xs font-bold uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-fixed/20 border border-secondary-fixed/30 text-secondary-fixed font-label-badge text-xs font-bold uppercase tracking-widest mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse" />
-            Session 2026–27 Admissions Now Open
+            Session 2026–27 Admissions Open
           </div>
 
-          {/* Main heading */}
-          <h1 className="font-headline text-3xl sm:text-4xl lg:text-5xl text-on-primary font-bold leading-tight tracking-tight max-w-3xl mx-auto mb-4">
-            Where Every Child's Journey{" "}
-            <span className="text-secondary-fixed">Begins with Purpose</span>
+          <h1 className="font-headline text-3xl sm:text-4xl lg:text-5xl text-on-primary font-bold leading-tight tracking-tight max-w-3xl mx-auto mb-3">
+            Academics &amp;{" "}
+            <span className="text-secondary-fixed">Admissions</span>
           </h1>
 
-          {/* Subtext */}
-          <p className="font-body-lg text-on-primary/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-            From curious Playgroup beginners to confident Class 8th scholars — Sharda Nursery Public School nurtures minds, builds character, and prepares every student for a brilliant future in Bokaro Steel City.
+          <p className="text-on-primary/70 text-sm sm:text-base max-w-lg mx-auto">
+            Playgroup to Class 8th · English Medium · Bokaro Steel City
           </p>
-
-          {/* Quick stats row */}
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10">
-            {[
-              { value: "20+", label: "Years of Excellence" },
-              { value: "100%", label: "DAV / DPS Selection" },
-              { value: "1 : 12", label: "Teacher–Student Ratio" },
-              { value: "Zero", label: "Admission Fee Offer" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="flex flex-col items-center px-5 py-3 rounded-2xl bg-on-primary/10 border border-on-primary/15 backdrop-blur-sm min-w-[110px]"
-              >
-                <span className="font-headline text-xl sm:text-2xl font-bold text-secondary-fixed leading-none">{stat.value}</span>
-                <span className="font-body-sm text-on-primary/70 text-[11px] mt-1 text-center leading-tight">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* CTAs */}
-          <div className="flex flex-wrap justify-center items-center gap-3">
-            <a
-              href="#inquiry-form"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-secondary-fixed text-primary font-title-md font-bold text-sm hover:bg-secondary-fixed/90 shadow-lg hover:shadow-xl transition-all"
-            >
-              Apply for Admission →
-            </a>
-            <a
-              href="tel:+919835112975"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-on-primary/10 border border-on-primary/20 text-on-primary font-title-md font-semibold text-sm hover:bg-on-primary/20 transition-all"
-            >
-              📞 Call: +91 98351 12975
-            </a>
-          </div>
         </div>
       </section>
 
