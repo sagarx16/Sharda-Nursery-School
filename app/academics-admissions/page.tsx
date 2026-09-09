@@ -19,7 +19,7 @@ export default function AcademicsAdmissionsPage() {
 
       {/* Breadcrumb Bar */}
       <div className="w-full bg-surface-container-low border-b border-surface-container-high/60">
-        <div className="max-w-[1200px] mx-auto px-4 lg:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+        <div className="max-w-[1200px] mx-auto px-4 lg:px-6 py-2 sm:py-2.5 flex flex-wrap items-center justify-between gap-2.5">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
             <Link href="/" className="hover:text-primary transition-colors flex items-center gap-1">
               <Home className="w-4 h-4" />

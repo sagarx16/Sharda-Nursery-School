@@ -105,19 +105,19 @@ export default function PhotoCarousel() {
   const nextIndex = (current + 1) % total;
 
   return (
-    <section className="w-full py-10 sm:py-14 lg:py-16 bg-surface-container-low overflow-hidden">
+    <section className="w-full pt-4 sm:pt-6 pb-12 sm:pb-16 bg-surface-container-low overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 lg:px-6">
 
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed-variant font-label-badge text-label-badge uppercase font-bold tracking-wider mb-3">
-            <Camera className="w-3.5 h-3.5 shrink-0" />
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+          <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed-variant font-label-badge text-[10px] sm:text-label-badge uppercase font-bold tracking-wider mb-2">
+            <Camera className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
             Campus Glimpses
           </span>
           <h2 className="font-headline-lg text-headline-lg text-primary-container leading-tight">
             Life at S.N. Public School
           </h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant mt-2">
+          <p className="font-body-md sm:font-body-lg text-body-md sm:text-body-lg text-on-surface-variant mt-1.5">
             A peek into the vibrant, nurturing environment where every child flourishes.
           </p>
         </div>
