@@ -58,30 +58,35 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
       {/* Top Banner Bar */}
       <div className="w-full bg-primary text-on-primary border-b border-primary-container/50">
-        <div className="max-w-[1200px] mx-auto px-4 lg:px-6 h-9 flex items-center justify-between font-body-sm text-xs">
-          <div className="min-w-0 flex items-center gap-2 sm:gap-4 overflow-hidden text-ellipsis whitespace-nowrap">
-            <a
-              href={`tel:${siteConfig.phoneRaw}`}
-              className="flex items-center gap-1.5 text-secondary-fixed hover:text-white transition-colors font-title-md font-semibold whitespace-nowrap"
-            >
-              <Phone className="w-3.5 h-3.5 shrink-0" />
-              <span className="hidden sm:inline">{siteConfig.phone}</span>
-            </a>
-            <span className="hidden sm:inline text-outline-variant/60">|</span>
-            <span className="hidden sm:flex items-center gap-1.5 text-surface-container-lowest/90 whitespace-nowrap">
-              <MapPin className="w-3.5 h-3.5 text-secondary-fixed shrink-0" />
-              <span>{siteConfig.location}</span>
-            </span>
-          </div>
+        <div className="max-w-[1200px] mx-auto px-4 lg:px-6 font-body-sm text-xs">
+          {/* Mobile: 2-row layout for contact info */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between sm:h-9 py-1.5 sm:py-0 gap-0.5 sm:gap-0">
+            {/* Left: Phone + Address */}
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+              <a
+                href={`tel:${siteConfig.phoneRaw}`}
+                className="flex items-center gap-1 text-secondary-fixed hover:text-white transition-colors font-title-md font-semibold whitespace-nowrap"
+              >
+                <Phone className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+                <span className="text-[10px] sm:text-xs">{siteConfig.phone}</span>
+              </a>
+              <span className="text-outline-variant/60 hidden xs:inline">|</span>
+              <span className="flex items-center gap-1 text-surface-container-lowest/90">
+                <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-secondary-fixed shrink-0" />
+                <span className="text-[10px] sm:text-xs">{siteConfig.location}</span>
+              </span>
+            </div>
 
-          <div className="min-w-0 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap overflow-hidden">
-            <Sparkles className="w-3.5 h-3.5 text-secondary-fixed animate-pulse shrink-0" />
-            <span className="font-title-md text-xs sm:text-base text-secondary-fixed tracking-wide font-semibold truncate">
-              Admissions Open {session.currentSession}
-            </span>
-            <span className="hidden md:inline text-surface-container-lowest/85 font-medium">
-              • Free Admission Available
-            </span>
+            {/* Right: Admissions status */}
+            <div className="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-secondary-fixed animate-pulse shrink-0" />
+              <span className="font-title-md text-[10px] sm:text-xs md:text-sm text-secondary-fixed tracking-wide font-semibold">
+                Admissions Open {session.currentSession}
+              </span>
+              <span className="hidden md:inline text-surface-container-lowest/85 font-medium">
+                • Free Admission Available
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -91,7 +96,7 @@ export default function Header() {
         <div className="max-w-[1200px] mx-auto px-3 sm:px-4 lg:px-6 h-full flex items-center justify-between gap-1 sm:gap-3 lg:gap-4 xl:gap-2">
           {/* Logo & School Name */}
           <Link href="/" className="flex items-center gap-2 sm:gap-3 min-w-0 shrink group py-1">
-            <div className="relative w-10 h-10 sm:w-14 sm:h-14 group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <div className="relative w-9 h-9 sm:w-14 sm:h-14 group-hover:scale-105 transition-transform duration-300 shrink-0">
               <Image
                 src="/School Emblem Logo.png"
                 alt="Sharda Nursery Public School Emblem Crest"
@@ -101,11 +106,11 @@ export default function Header() {
                 priority
               />
             </div>
-            <div className="flex min-w-0 max-w-[175px] sm:max-w-none flex-col justify-center overflow-hidden">
-              <span className="font-headline text-[10px] sm:text-base xl:text-base tracking-tight text-primary-container leading-tight font-bold group-hover:text-primary transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
+            <div className="flex min-w-0 flex-col justify-center">
+              <span className="font-headline text-[11px] xs:text-xs sm:text-sm md:text-base xl:text-base tracking-tight text-primary-container leading-tight font-bold group-hover:text-primary transition-colors break-words">
                 SHARDA NURSERY PUBLIC SCHOOL
               </span>
-              <span className="hidden sm:block font-label-badge text-[10px] xl:text-[10px] uppercase text-secondary font-bold tracking-wider mt-1 whitespace-nowrap">
+              <span className="font-label-badge text-[9px] xs:text-[10px] xl:text-[10px] uppercase text-secondary font-bold tracking-wider mt-0.5 leading-tight break-words">
                 &amp; TUITION CENTER • English Medium, Bokaro
               </span>
             </div>
@@ -138,10 +143,12 @@ export default function Header() {
           </nav>
 
           {/* Action CTAs */}
-          <div className="flex items-center gap-2.5 shrink-0">
-            <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-[10px] font-bold uppercase tracking-wide border border-secondary-container shrink-0 whitespace-nowrap">
-              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse shrink-0" />
-              <span>Admission Open</span>
+          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+            {/* Admission Open badge — visible on all screens */}
+            <div className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-[9px] sm:text-[10px] font-bold uppercase tracking-wide border border-secondary-container shrink-0 whitespace-nowrap">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-secondary animate-pulse shrink-0" />
+              <span className="hidden xs:inline">Admission</span>
+              <span>Open</span>
             </div>
 
             <a
@@ -167,7 +174,7 @@ export default function Header() {
 
       {/* Mobile / Tablet Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="xl:hidden fixed inset-x-0 top-[116px] bg-surface-container-lowest border-b border-surface-container-high shadow-2xl p-4 sm:p-5 transition-all animate-in slide-in-from-top duration-200">
+        <div className="xl:hidden fixed inset-x-0 top-[128px] sm:top-[116px] bg-surface-container-lowest border-b border-surface-container-high shadow-2xl p-4 sm:p-5 transition-all animate-in slide-in-from-top duration-200">
           <nav className="flex flex-col gap-2">
             {siteConfig.navLinks.map((link) => {
               const isActive = pathname === link.href;
