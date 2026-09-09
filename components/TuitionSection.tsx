@@ -17,7 +17,7 @@ export default function TuitionSection() {
                 className="w-full h-80 lg:h-[440px] object-cover"
               />
             </div>
-            <div className="absolute top-4 right-4 bg-primary-container text-on-primary px-4 py-1.5 rounded-full font-label-badge text-label-badge font-bold uppercase tracking-wider shadow-md">
+            <div className="absolute top-3 right-3 max-w-[calc(100%-1.5rem)] text-center bg-primary-container text-on-primary px-3 sm:px-4 py-1.5 rounded-full font-label-badge text-label-badge font-bold uppercase tracking-wider shadow-md">
               Evening Wing (2:30 PM - 7:00 PM)
             </div>
           </div>

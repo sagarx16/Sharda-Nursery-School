@@ -92,7 +92,7 @@ export default function WingCard({
 
       {/* Timings Footer */}
       <div className="pt-3 bg-surface-container-low p-3.5 rounded-xl border border-surface-container/60">
-        <div className="flex items-center justify-between text-body-sm font-title-md text-on-surface">
+        <div className="flex flex-col items-start gap-1.5 text-body-sm font-title-md text-on-surface sm:flex-row sm:items-center sm:justify-between">
           <span className="flex items-center gap-1.5 text-on-surface-variant">
             <Clock className="w-4 h-4 text-primary" />
             <span>Hours:</span>

@@ -102,7 +102,7 @@ export default function EntranceMentorship() {
 
               <div className="space-y-4 my-6">
                 <div className="p-4 bg-surface-container-low rounded-xl border border-surface-container">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between">
                     <span className="font-title-md text-title-md text-on-surface">
                       Morning Tuition Batch
                     </span>
@@ -114,7 +114,7 @@ export default function EntranceMentorship() {
                 </div>
 
                 <div className="p-4 bg-surface-container-low rounded-xl border border-surface-container">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between">
                     <span className="font-title-md text-title-md text-on-surface">
                       Evening Tuition Batch
                     </span>
@@ -126,7 +126,7 @@ export default function EntranceMentorship() {
                 </div>
 
                 <div className="p-4 bg-surface-container-low rounded-xl border border-surface-container">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between">
                     <span className="font-title-md text-title-md text-on-surface">
                       Saturday Support Batch
                     </span>
