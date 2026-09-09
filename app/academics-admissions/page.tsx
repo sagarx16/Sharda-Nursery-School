@@ -9,6 +9,7 @@ import AdmissionProcess from "@/components/AdmissionProcess";
 import AdmissionForm from "@/components/AdmissionForm";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaStrip from "@/components/CtaStrip";
+import PhotoCarousel from "@/components/PhotoCarousel";
 import { Home, Stars, ArrowRight, Phone, Baby, BookOpen, Microscope, Award, Building2 } from "lucide-react";
 
 export const metadata = {
@@ -211,6 +212,9 @@ export default function AcademicsAdmissionsPage() {
 
       {/* 3 Step Journey */}
       <AdmissionProcess />
+
+      {/* Campus Photo Carousel */}
+      <PhotoCarousel />
 
       {/* Form */}
       <AdmissionForm />
