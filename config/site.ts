@@ -15,9 +15,9 @@ export function getAcademicSession() {
 
   return {
     currentSession: `${startYear}-${endYearShort}`,
-    currentSessionFull: `${startYear} – ${endYear}`,
+    currentSessionFull: `${startYear} \u2013 ${endYear}`,
     nextSession: `${endYear}-${String(endYear + 1).slice(-2)}`,
-    nextSessionFull: `${endYear} – ${endYear + 1}`,
+    nextSessionFull: `${endYear} \u2013 ${endYear + 1}`,
     startYear,
     endYear,
     copyrightYear: year,
@@ -27,19 +27,33 @@ export function getAcademicSession() {
 export const siteConfig = {
   name: "S.N. Public School & Tuition Center",
   shortName: "S.N. Public School",
-  subTitle: "English Medium • Playgroup to Class 8th & CBSE Entrance Mentorship",
+  subTitle: "English Medium \u2022 Playgroup to Class 8th & CBSE Entrance Mentorship",
   tagline:
     "Nurturing young minds with values, wisdom, and excellence from Playgroup to Class 8th in Bokaro Steel City.",
   phone: "+91 9835112975",
   phoneRaw: "9835112975",
-  email: "contact@shardanurserybokaro.com",
+  email: "anupk1974@gmail.com",
   address: "Sector 9/C, Shopping Center, Bokaro Steel City, Jharkhand - 827009",
   location: "Sector 9/C, Shopping Center, Bokaro",
+
+  /**
+   * Canonical address string sent to Google Maps Embed API v1/place.
+   * Google geocodes this string server-side and drops the pin — no lat/lng hardcoding.
+   */
+  mapQuery: "S.N. Public School, Sector 9/C, Shopping Center, Bokaro Steel City, Jharkhand 827009",
+
+  /**
+   * Full Google Maps search URL used for the "Get Directions" button.
+   * Derives from the same address so pin, embed, and directions all stay in sync.
+   */
+  mapSearchUrl:
+    "https://www.google.com/maps/search/?api=1&query=S.N.+Public+School%2C+Sector+9%2FC%2C+Shopping+Center%2C+Bokaro+Steel+City%2C+Jharkhand+827009",
+
   hours: {
-    school: "Mon – Sat: 7:30 AM – 1:30 PM",
-    nursery: "Mon – Sat: 8:30 AM – 12:00 PM (Saturday closes early)",
-    tuition: "Mon – Sat: 2:30 PM – 7:00 PM",
-    desk: "Mon – Sat: 8:00 AM – 4:00 PM",
+    school: "Mon \u2013 Sat: 7:30 AM \u2013 1:30 PM",
+    nursery: "Mon \u2013 Sat: 8:30 AM \u2013 12:00 PM (Saturday closes early)",
+    tuition: "Mon \u2013 Sat: 2:30 PM \u2013 7:00 PM",
+    desk: "Mon \u2013 Sat: 8:00 AM \u2013 4:00 PM",
   },
   stats: {
     intakeRecord: "100%",

@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 
     // Optional email dispatch via Resend or Nodemailer if API key is present
     const resendApiKey = process.env.RESEND_API_KEY;
-    const recipientEmail = process.env.NOTIFICATION_EMAIL || "contact@shardanurserybokaro.com";
+    const recipientEmail = process.env.NOTIFICATION_EMAIL || "anupk1974@gmail.com";
 
     if (resendApiKey) {
       try {

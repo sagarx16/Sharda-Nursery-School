@@ -87,4 +87,4 @@ npm run start
 - **School Name**: S.N. Public School & Tuition Center
 - **Address**: Sector 9/C, Shopping Center, Bokaro Steel City, Jharkhand - 827009
 - **Phone**: +91 9835112975
-- **Email**: contact@shardanurserybokaro.com
+- **Email**: anupk1974@gmail.com
