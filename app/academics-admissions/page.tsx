@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAcademicSession } from "@/config/site";
-import AdmissionForm from "@/components/AdmissionForm";
+import LeadershipSection from "@/components/LeadershipSection";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaStrip from "@/components/CtaStrip";
 
@@ -38,13 +38,11 @@ export default function AcademicsAdmissionsPage() {
         </div>
       </div>
 
-
+      {/* Our Leadership (Founders & Administration) */}
+      <LeadershipSection />
 
       {/* Academic Curriculum & Learning Framework */}
       <AcademicCurriculum />
-
-      {/* Admission Form */}
-      <AdmissionForm />
 
       {/* FAQs */}
       <FaqAccordion />

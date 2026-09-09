@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import GalleryFilter from "@/components/GalleryFilter";
-import AdmissionForm from "@/components/AdmissionForm";
 import CtaStrip from "@/components/CtaStrip";
 import CampusHeroSlider from "@/components/CampusHeroSlider";
 import {
@@ -157,8 +156,7 @@ export default function CampusLifeGalleryPage() {
         </div>
       </section>
 
-      {/* Form & CTA */}
-      <AdmissionForm />
+      {/* CTA */}
       <CtaStrip />
     </div>
   );
