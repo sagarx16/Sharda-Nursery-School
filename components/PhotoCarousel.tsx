@@ -46,36 +46,6 @@ const CAMPUS_SLIDES: SlideItem[] = [
     alt: "Sharda Nursery school activities Bokaro Steel City",
     caption: "Daily Activities",
   },
-  {
-    src: "/images/classroom-hero.jpg",
-    alt: "Interactive classroom learning at Sharda Nursery Public School",
-    caption: "Interactive Learning",
-  },
-  {
-    src: "/images/nursery-wing.jpg",
-    alt: "Nursery wing playful learning environment",
-    caption: "Nursery Wing",
-  },
-  {
-    src: "/images/primary-wing.jpg",
-    alt: "Primary wing academics Sharda Nursery",
-    caption: "Primary Wing",
-  },
-  {
-    src: "/images/middle-wing.jpg",
-    alt: "Middle school wing Sharda Nursery Bokaro",
-    caption: "Middle Wing",
-  },
-  {
-    src: "/images/tuition-center.jpg",
-    alt: "Evening tuition center Sharda Nursery",
-    caption: "Tuition Center",
-  },
-  {
-    src: "/images/entrance-coaching.jpg",
-    alt: "Entrance exam coaching DAV DPS Sharda Nursery",
-    caption: "Entrance Coaching",
-  },
 ];
 
 const AUTOPLAY_DELAY = 3500;
