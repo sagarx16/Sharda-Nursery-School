@@ -21,6 +21,14 @@ export const metadata = {
 };
 
 export default function ContactPage() {
+  // Google Maps Embed API v1/place — Google geocodes the address server-side and places the pin.
+  // Falls back gracefully to the q= format if no API key is configured.
+  const mapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY;
+  const encodedQuery = encodeURIComponent(siteConfig.mapQuery);
+  const mapEmbedSrc = mapsApiKey
+    ? `https://www.google.com/maps/embed/v1/place?key=${mapsApiKey}&q=${encodedQuery}&zoom=17&language=en`
+    : `https://maps.google.com/maps?q=${encodedQuery}&hl=en&z=17&output=embed`;
+
   return (
     <div className="w-full flex flex-col">
       {/* Header Banner */}
@@ -180,11 +188,11 @@ export default function ContactPage() {
                   Conveniently situated at Sector 9/C Shopping Center, easily accessible from Sector 9, Sector 4, Sector 8, Sector 11, and Chas.
                 </p>
 
-                {/* Google Map Iframe Embed */}
+                {/* Google Map Iframe Embed — address geocoded by Google, no hardcoded lat/lng */}
                 <div className="w-full h-80 lg:h-96 rounded-xl overflow-hidden border border-surface-container-high shadow-inner bg-surface-container-high relative">
                   <iframe
-                    title="S.N. Public School Sector 9/C Bokaro Map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14619.684123567!2d86.1300!3d23.6700!2m3!1f0!0!f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f42337d1d23456%3A0x123456789abcdef!2sSector%209%2FC%2C%20Bokaro%20Steel%20City%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    title="S.N. Public School & Tuition Center Exact Location Map"
+                    src={mapEmbedSrc}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -192,6 +200,37 @@ export default function ContactPage() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   />
+                  {/* Floating Location Card */}
+                  <div className="absolute top-3 left-3 bg-surface-container-lowest/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-md border border-surface-container-high flex items-center gap-2 max-w-[85%]">
+                    <div className="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                      <MapPin className="w-4 h-4 text-secondary-fixed" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="font-title-md text-xs sm:text-sm font-bold text-primary-container truncate">
+                        {siteConfig.shortName}
+                      </div>
+                      <div className="text-[10px] sm:text-xs text-on-surface-variant truncate">
+                        {siteConfig.location}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Direct Google Maps Action CTA */}
+                <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 bg-surface-container-low rounded-xl border border-surface-container">
+                  <div className="flex items-center gap-2 text-xs sm:text-body-sm text-on-surface-variant font-medium">
+                    <MapPin className="w-4 h-4 text-primary shrink-0" />
+                    <span>{siteConfig.address}</span>
+                  </div>
+                  <a
+                    href={siteConfig.mapSearchUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-title-md text-xs sm:text-body-sm font-bold hover:bg-primary transition-all shadow-xs shrink-0"
+                  >
+                    <Navigation className="w-3.5 h-3.5 text-secondary-fixed" />
+                    <span>Get Directions in Google Maps →</span>
+                  </a>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">

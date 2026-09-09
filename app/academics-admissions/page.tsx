@@ -3,7 +3,7 @@ import { getAcademicSession } from "@/config/site";
 import AdmissionForm from "@/components/AdmissionForm";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaStrip from "@/components/CtaStrip";
-import PhotoCarousel from "@/components/PhotoCarousel";
+
 import AcademicCurriculum from "@/components/AcademicCurriculum";
 import { Home, Stars } from "lucide-react";
 
@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function AcademicsAdmissionsPage() {
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col pt-4">
 
       {/* Breadcrumb Bar */}
       <div className="w-full bg-surface-container-low border-b border-surface-container-high/60">
@@ -38,8 +38,7 @@ export default function AcademicsAdmissionsPage() {
         </div>
       </div>
 
-      {/* Campus Glimpses / Photo Carousel — First Section on Page */}
-      <PhotoCarousel />
+
 
       {/* Academic Curriculum & Learning Framework */}
       <AcademicCurriculum />

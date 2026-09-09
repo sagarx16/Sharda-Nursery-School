@@ -8,6 +8,7 @@ import AdmissionProcess from "@/components/AdmissionProcess";
 import AdmissionForm from "@/components/AdmissionForm";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaStrip from "@/components/CtaStrip";
+import PhotoCarousel from "@/components/PhotoCarousel";
 import {
   Sparkles,
   ArrowRight,
@@ -27,6 +28,9 @@ export default function Home() {
 
   return (
     <div className="w-full flex flex-col">
+      {/* Campus Glimpses / Photo Carousel — Pinned above Hero */}
+      <PhotoCarousel />
+
       {/* Hero Section */}
       <section className="relative w-full bg-surface-container-low overflow-hidden py-16 lg:py-24 border-b border-surface-container-high/60">
         {/* Subtle Ambient Gold/Crimson Blurred Circles */}
