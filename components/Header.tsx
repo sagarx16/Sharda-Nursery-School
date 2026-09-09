@@ -99,7 +99,7 @@ export default function Header() {
             <div className="relative w-9 h-9 sm:w-14 sm:h-14 group-hover:scale-105 transition-transform duration-300 shrink-0">
               <Image
                 src="/School Emblem Logo.png"
-                alt="Sharda Nursery Public School Emblem Crest"
+                alt="S.N. Public School Emblem Crest"
                 width={56}
                 height={56}
                 className="w-full h-full object-contain"
@@ -107,8 +107,8 @@ export default function Header() {
               />
             </div>
             <div className="flex min-w-0 flex-col justify-center">
-              <span className="font-headline text-[11px] xs:text-xs sm:text-sm md:text-base xl:text-base tracking-tight text-primary-container leading-tight font-bold group-hover:text-primary transition-colors break-words">
-                SHARDA NURSERY PUBLIC SCHOOL
+              <span className="font-headline text-xs xs:text-sm sm:text-base md:text-lg xl:text-lg tracking-tight text-primary-container leading-tight font-bold group-hover:text-primary transition-colors break-words">
+                S.N. PUBLIC SCHOOL
               </span>
               <span className="font-label-badge text-[9px] xs:text-[10px] xl:text-[10px] uppercase text-secondary font-bold tracking-wider mt-0.5 leading-tight break-words">
                 &amp; TUITION CENTER • English Medium, Bokaro

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.tagline,
   keywords: [
-    "Sharda Nursery Public School",
+    "S.N. Public School",
     "Tuition Center Bokaro",
     "School in Bokaro Sector 9/C",
     "Nursery School Bokaro",

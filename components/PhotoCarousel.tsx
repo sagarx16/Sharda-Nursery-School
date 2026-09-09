@@ -13,37 +13,37 @@ interface SlideItem {
 const CAMPUS_SLIDES: SlideItem[] = [
   {
     src: "/images/WhatsApp Image 2026-09-09 at 15.26.40.jpeg",
-    alt: "Sharda Nursery Public School campus life Bokaro",
+    alt: "S.N. Public School campus life Bokaro",
     caption: "Campus Life",
   },
   {
     src: "/images/WhatsApp Image 2026-09-09 at 15.26.41.jpeg",
-    alt: "Sharda Nursery classroom activity Bokaro",
+    alt: "S.N. Public School classroom activity Bokaro",
     caption: "Classroom Activities",
   },
   {
     src: "/images/WhatsApp Image 2026-09-09 at 15.26.41 (1).jpeg",
-    alt: "Sharda Nursery students learning together",
+    alt: "S.N. Public School students learning together",
     caption: "Learning Together",
   },
   {
     src: "/images/WhatsApp Image 2026-09-09 at 15.26.42.jpeg",
-    alt: "Sharda Nursery school events and activities",
+    alt: "S.N. Public School events and activities",
     caption: "School Events",
   },
   {
     src: "/images/WhatsApp Image 2026-09-09 at 15.26.43.jpeg",
-    alt: "Sharda Nursery Public School Bokaro students",
+    alt: "S.N. Public School Bokaro students",
     caption: "Our Students",
   },
   {
     src: "/images/WhatsApp Image 2026-09-09 at 15.26.43 (1).jpeg",
-    alt: "Sharda Nursery school moments",
+    alt: "S.N. Public School moments",
     caption: "School Moments",
   },
   {
     src: "/images/WhatsApp Image 2026-09-09 at 15.26.43 (2).jpeg",
-    alt: "Sharda Nursery school activities Bokaro Steel City",
+    alt: "S.N. Public School activities Bokaro Steel City",
     caption: "Daily Activities",
   },
 ];
@@ -115,7 +115,7 @@ export default function PhotoCarousel() {
             Campus Glimpses
           </span>
           <h2 className="font-headline-lg text-headline-lg text-primary-container leading-tight">
-            Life at Sharda Nursery
+            Life at S.N. Public School
           </h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant mt-2">
             A peek into the vibrant, nurturing environment where every child flourishes.

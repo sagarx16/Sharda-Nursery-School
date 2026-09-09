@@ -1,5 +1,5 @@
 /**
- * Sharda Nursery Public School & Tuition Center - Central Site Configuration
+ * S.N. Public School & Tuition Center - Central Site Configuration
  * Handles dynamic academic session calculations, contact details, navigation, and intake years.
  */
 
@@ -25,8 +25,8 @@ export function getAcademicSession() {
 }
 
 export const siteConfig = {
-  name: "Sharda Nursery Public School & Tuition Center",
-  shortName: "Sharda Nursery Public School",
+  name: "S.N. Public School & Tuition Center",
+  shortName: "S.N. Public School",
   subTitle: "English Medium • Playgroup to Class 8th & CBSE Entrance Mentorship",
   tagline:
     "Nurturing young minds with values, wisdom, and excellence from Playgroup to Class 8th in Bokaro Steel City.",

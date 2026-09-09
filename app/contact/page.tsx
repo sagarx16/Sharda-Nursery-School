@@ -17,7 +17,7 @@ import {
 export const metadata = {
   title: "Contact & Locate Us",
   description:
-    "Visit or contact Sharda Nursery Public School & Tuition Center in Sector 9/C Shopping Center, Bokaro Steel City. Call +91 9835112975.",
+    `Visit or contact ${siteConfig.name} in Sector 9/C Shopping Center, Bokaro Steel City. Call +91 9835112975.`,
 };
 
 export default function ContactPage() {
@@ -183,7 +183,7 @@ export default function ContactPage() {
                 {/* Google Map Iframe Embed */}
                 <div className="w-full h-80 lg:h-96 rounded-xl overflow-hidden border border-surface-container-high shadow-inner bg-surface-container-high relative">
                   <iframe
-                    title="Sharda Nursery Public School Sector 9/C Bokaro Map"
+                    title="S.N. Public School Sector 9/C Bokaro Map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14619.684123567!2d86.1300!3d23.6700!2m3!1f0!0!f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f42337d1d23456%3A0x123456789abcdef!2sSector%209%2FC%2C%20Bokaro%20Steel%20City%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                     width="100%"
                     height="100%"

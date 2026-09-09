@@ -16,14 +16,14 @@ export default function Footer() {
               <div className="relative w-14 h-14 shrink-0">
                 <Image
                   src="/School Emblem Logo.png"
-                  alt="Sharda Nursery Public School Emblem Crest"
+                  alt="S.N. Public School Emblem Crest"
                   width={56}
                   height={56}
                   className="w-full h-full object-contain"
                 />
               </div>
               <span className="font-headline-sm text-title-md text-secondary-fixed leading-tight font-bold">
-                Sharda Nursery Public School
+                {siteConfig.shortName}
               </span>
             </div>
             <p className="font-body-sm text-body-sm text-surface-container-high leading-relaxed">

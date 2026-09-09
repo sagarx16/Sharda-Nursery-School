@@ -55,7 +55,7 @@ export async function POST(request: Request) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "Sharda Nursery Admissions <onboarding@resend.dev>",
+            from: "S.N. Public School Admissions <onboarding@resend.dev>",
             to: recipientEmail,
             subject: `New Admission Inquiry: ${childName} (${gradeSelect})`,
             html: `

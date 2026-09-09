@@ -54,7 +54,7 @@ export default function FaqAccordion({ items }: { items?: FaqItem[] }) {
             Frequently Asked Questions
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-2">
-            Everything parents ask when considering Sharda Nursery Public School &amp; Tuition Center.
+            Everything parents ask when considering {siteConfig.name}.
           </p>
         </div>
 

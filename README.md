@@ -1,6 +1,6 @@
-# Sharda Nursery Public School & Tuition Center — Next.js Application
+# S.N. Public School & Tuition Center — Next.js Application
 
-A production-ready, scalable, and responsive Next.js (App Router) web application built for **Sharda Nursery Public School & Tuition Center**, Bokaro Steel City. Migrated faithfully from Google Stitch design reference (Project ID: `2557966356959833211`).
+A production-ready, scalable, and responsive Next.js (App Router) web application built for **S.N. Public School & Tuition Center**, Bokaro Steel City. Migrated faithfully from Google Stitch design reference (Project ID: `2557966356959833211`).
 
 ---
 
@@ -84,7 +84,7 @@ npm run start
 
 ## 📞 Support & Location
 
-- **School Name**: Sharda Nursery Public School & Tuition Center
+- **School Name**: S.N. Public School & Tuition Center
 - **Address**: Sector 9/C, Shopping Center, Bokaro Steel City, Jharkhand - 827009
 - **Phone**: +91 9835112975
 - **Email**: contact@shardanurserybokaro.com

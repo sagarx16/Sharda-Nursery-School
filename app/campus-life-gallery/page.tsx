@@ -19,7 +19,7 @@ import {
 export const metadata = {
   title: "Campus Life & Annual Photo Gallery",
   description:
-    "Explore the vibrant campus facilities, safe playrooms, science labs, smart classrooms, and annual student achievements at Sharda Nursery Public School, Bokaro.",
+    "Explore the vibrant campus facilities, safe playrooms, science labs, smart classrooms, and annual student achievements at S.N. Public School, Bokaro.",
 };
 
 export default function CampusLifeGalleryPage() {
@@ -85,7 +85,7 @@ export default function CampusLifeGalleryPage() {
               Campus Life &amp; Student Experience in Bokaro
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              At Sharda Nursery Public School &amp; Tuition Center, learning extends far beyond textbooks. We provide a warm, secure, and inspiring atmosphere where scholars develop self-confidence, artistic expression, physical health, and lifelong friendships.
+              At {siteConfig.name}, learning extends far beyond textbooks. We provide a warm, secure, and inspiring atmosphere where scholars develop self-confidence, artistic expression, physical health, and lifelong friendships.
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function CampusLifeGalleryPage() {
               Annual Student Photo Gallery
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant mt-2">
-              Moments of joy, learning breakthroughs, sports days, and cultural celebrations at Sharda Nursery Public School.
+              Moments of joy, learning breakthroughs, sports days, and cultural celebrations at S.N. Public School.
             </p>
           </div>
 
