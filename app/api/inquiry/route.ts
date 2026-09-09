@@ -1,5 +1,19 @@
 import { NextResponse } from "next/server";
 
+function escapeHtml(value: string) {
+  return value.replace(
+    /[&<>"']/g,
+    (character) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      })[character] || character
+  );
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -42,13 +56,13 @@ export async function POST(request: Request) {
 
     console.log("=== NEW ADMISSION INQUIRY RECEIVED ===", submissionData);
 
-    // Optional email dispatch via Resend or Nodemailer if API key is present
+    // Send the inquiry notification server-side when Resend is configured.
     const resendApiKey = process.env.RESEND_API_KEY;
     const recipientEmail = process.env.NOTIFICATION_EMAIL || "anupk1974@gmail.com";
 
     if (resendApiKey) {
       try {
-        await fetch("https://api.resend.com/emails", {
+        const emailResponse = await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${resendApiKey}`,
@@ -60,21 +74,27 @@ export async function POST(request: Request) {
             subject: `New Admission Inquiry: ${childName} (${gradeSelect})`,
             html: `
               <h2>New Admission Inquiry Submitted</h2>
-              <p><strong>Parent Name:</strong> ${submissionData.parentName}</p>
-              <p><strong>Contact Phone:</strong> ${submissionData.contactPhone}</p>
-              <p><strong>Child Name:</strong> ${submissionData.childName}</p>
-              <p><strong>Child DOB:</strong> ${submissionData.childDob}</p>
-              <p><strong>Grade Applying:</strong> ${submissionData.gradeSelect}</p>
-              <p><strong>Residential Area:</strong> ${submissionData.residentialSector}</p>
-              <p><strong>Message/Notes:</strong> ${submissionData.parentMessage}</p>
+              <p><strong>Parent Name:</strong> ${escapeHtml(submissionData.parentName)}</p>
+              <p><strong>Contact Phone:</strong> ${escapeHtml(submissionData.contactPhone)}</p>
+              <p><strong>Child Name:</strong> ${escapeHtml(submissionData.childName)}</p>
+              <p><strong>Child DOB:</strong> ${escapeHtml(String(submissionData.childDob))}</p>
+              <p><strong>Grade Applying:</strong> ${escapeHtml(String(submissionData.gradeSelect))}</p>
+              <p><strong>Residential Area:</strong> ${escapeHtml(submissionData.residentialSector)}</p>
+              <p><strong>Message/Notes:</strong> ${escapeHtml(submissionData.parentMessage)}</p>
               <hr />
-              <p>Submitted at ${submissionData.timestamp}</p>
+              <p>Submitted at ${escapeHtml(submissionData.timestamp)}</p>
             `,
           }),
         });
+
+        if (!emailResponse.ok) {
+          console.error("Resend notification failed:", await emailResponse.text());
+        }
       } catch (emailError) {
         console.error("Resend notification error (non-fatal):", emailError);
       }
+    } else {
+      console.warn("RESEND_API_KEY is missing; inquiry was recorded without email notification.");
     }
 
     return NextResponse.json({
