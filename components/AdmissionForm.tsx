@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { siteConfig, getAcademicSession } from "@/config/site";
 import {
   UserCheck,
@@ -15,6 +15,17 @@ import {
 
 export default function AdmissionForm() {
   const session = getAcademicSession();
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash === "#inquiry-form") {
+      const el = document.getElementById("inquiry-form");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 200);
+      }
+    }
+  }, []);
   const [formData, setFormData] = useState({
     parentName: "",
     contactPhone: "+91 ",

@@ -13,19 +13,19 @@ interface LeaderProfile {
 const leaders: LeaderProfile[] = [
   {
     name: "Mr. Anup Kumar",
-    title: "Director",
+    title: "Principal",
     roleBadge: "Est. 2003 · Co-Founder",
     image: "/images/director.jpg",
-    bio: "Co-founded S.N. Public School & Tuition Center in 2003, bringing over two decades of vision and leadership to nurture generations of students in Bokaro.",
+    bio: "Co-founded S.N. Public School & Tuition Center in 2003, bringing over two decades of vision, academic discipline, and leadership to nurture generations of students in Bokaro.",
     credentials: "20+ Years Educational Leadership",
   },
   {
     name: "Mrs. Suman Kumari",
-    title: "Principal",
+    title: "Head Teacher",
     roleBadge: "Est. 2003 · Co-Founder",
     image: "/images/principal.jpg",
-    bio: "Co-founded the school in 2003 alongside the Director, overseeing academic excellence, curriculum quality, and student welfare since inception.",
-    credentials: "Academic Excellence & Curriculum Head",
+    bio: "Co-founded the school in 2003 alongside the Principal, overseeing foundational learning, curriculum excellence, and student welfare since inception.",
+    credentials: "Foundational Pedagogy & Student Welfare",
   },
 ];
 
