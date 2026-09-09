@@ -38,29 +38,7 @@ export default function AcademicsAdmissionsPage() {
         </div>
       </div>
 
-      {/* Hero Intro Section */}
-      <section className="relative w-full bg-gradient-to-br from-primary via-primary to-primary-container overflow-hidden py-10 lg:py-14">
-        <div className="absolute -top-16 -left-16 w-72 h-72 rounded-full bg-secondary-fixed/10 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-16 -right-16 w-72 h-72 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none" />
-
-        <div className="max-w-[1200px] mx-auto px-4 lg:px-6 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-fixed/20 border border-secondary-fixed/30 text-secondary-fixed font-label-badge text-xs font-bold uppercase tracking-widest mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse" />
-            Session 2026–27 Admissions Open
-          </div>
-
-          <h1 className="font-headline text-3xl sm:text-4xl lg:text-5xl text-on-primary font-bold leading-tight tracking-tight max-w-3xl mx-auto mb-3">
-            Academics &amp;{" "}
-            <span className="text-secondary-fixed">Admissions</span>
-          </h1>
-
-          <p className="text-on-primary/70 text-sm sm:text-base max-w-lg mx-auto">
-            Playgroup to Class 8th · English Medium · Bokaro Steel City
-          </p>
-        </div>
-      </section>
-
-      {/* Photo Carousel */}
+      {/* Campus Glimpses / Photo Carousel — First Section on Page */}
       <PhotoCarousel />
 
       {/* Academic Curriculum & Learning Framework */}

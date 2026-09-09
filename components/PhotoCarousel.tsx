@@ -105,7 +105,7 @@ export default function PhotoCarousel() {
   const nextIndex = (current + 1) % total;
 
   return (
-    <section className="w-full py-16 lg:py-24 bg-surface-container-low overflow-hidden">
+    <section className="w-full py-10 sm:py-14 lg:py-16 bg-surface-container-low overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 lg:px-6">
 
         {/* Section Header */}
