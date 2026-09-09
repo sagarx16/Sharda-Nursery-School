@@ -136,3 +136,12 @@ body {
   color: var(--color-on-surface);
   font-family: var(--font-jakarta), sans-serif;
 }
+
+/* Campus hero slider progress bar animation */
+@keyframes progress-bar {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+.animate-progress-bar {
+  animation: progress-bar linear forwards;
+}

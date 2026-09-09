@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import GalleryFilter from "@/components/GalleryFilter";
 import AdmissionForm from "@/components/AdmissionForm";
 import CtaStrip from "@/components/CtaStrip";
+import CampusHeroSlider from "@/components/CampusHeroSlider";
 import {
   Home,
   ShieldCheck,
@@ -64,6 +65,9 @@ export default function CampusLifeGalleryPage() {
 
   return (
     <div className="w-full flex flex-col">
+      {/* Full-width photo slider — sits right below navbar */}
+      <CampusHeroSlider />
+
       {/* Hero Header */}
       <section className="relative w-full bg-surface-container-low overflow-hidden py-12 lg:py-16 border-b border-surface-container-high/60">
         <div className="max-w-[1200px] mx-auto px-4 lg:px-6 relative z-10">

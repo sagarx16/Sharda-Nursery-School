@@ -19,7 +19,7 @@ const defaultGallery: GalleryItem[] = [
     title: "Interactive Classroom Learning",
     category: "academics",
     categoryLabel: "Classroom",
-    imageSrc: "/images/WhatsApp Image 2026-09-09 at 15.26.41 (1).jpeg",
+    imageSrc: "/Photo/WhatsApp Image 2026-09-09 at 18.00.56 (2).jpeg",
     description: "Young scholars actively participating in teacher-guided group reading and learning sessions.",
   },
   {
@@ -27,7 +27,7 @@ const defaultGallery: GalleryItem[] = [
     title: "Playgroup & Nursery Activity",
     category: "nursery",
     categoryLabel: "Nursery & Play",
-    imageSrc: "/images/WhatsApp Image 2026-09-09 at 15.26.43 (1).jpeg",
+    imageSrc: "/Photo/WhatsApp Image 2026-09-09 at 18.00.57.jpeg",
     description: "Montessori sensory learning, rhymes recitation, and creative activities in our nursery wing.",
   },
   {
@@ -35,7 +35,7 @@ const defaultGallery: GalleryItem[] = [
     title: "Evening Tuition & Science Mentorship",
     category: "academics",
     categoryLabel: "Tuition Center",
-    imageSrc: "/images/WhatsApp Image 2026-09-09 at 15.26.43 (2).jpeg",
+    imageSrc: "/Photo/WhatsApp Image 2026-09-09 at 18.00.56.jpeg",
     description: "Dedicated micro-batch homework support, concept clarity, and exam preparation.",
   },
   {
@@ -43,7 +43,7 @@ const defaultGallery: GalleryItem[] = [
     title: "Annual Sports & Fitness Day",
     category: "sports",
     categoryLabel: "Sports & Fitness",
-    imageSrc: "/images/annual-sports-day.jpg",
+    imageSrc: "/Photo/WhatsApp Image 2026-09-09 at 18.00.54.jpeg",
     description: "Balancing games, relay races, and physical dexterity routines for primary scholars.",
   },
   {
@@ -51,7 +51,7 @@ const defaultGallery: GalleryItem[] = [
     title: "Saraswati Puja & Cultural Celebration",
     category: "events",
     categoryLabel: "Events & Festivals",
-    imageSrc: "/images/saraswati-puja.jpg",
+    imageSrc: "/Photo/WhatsApp Image 2026-09-09 at 18.00.55 (1).jpeg",
     description: "Traditional devotion, Saraswati Vandana recitations, and student cultural festivities.",
   },
   {
@@ -59,7 +59,7 @@ const defaultGallery: GalleryItem[] = [
     title: "Primary English Fluency Drill",
     category: "academics",
     categoryLabel: "Classroom",
-    imageSrc: "/images/english-fluency.jpg",
+    imageSrc: "/Photo/WhatsApp Image 2026-09-09 at 18.00.55.jpeg",
     description: "Spelling bee, recitation drills, and vocabulary development sessions in class.",
   },
 ];
